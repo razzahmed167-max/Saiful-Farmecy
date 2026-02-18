@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#059669">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    <title>Saiful Pharmacy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #f8fafc;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .carved-shadow {
+            box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #059669, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Premium Professional Animations */
+        @keyframes logo-reveal {
+            0% { transform: scale(0.5) translateY(20px); opacity: 0; filter: blur(10px); }
+            100% { transform: scale(1) translateY(0); opacity: 1; filter: blur(0); }
+        }
+        
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(2.4); opacity: 0; }
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-150%) skewX(-20deg); }
+            100% { transform: translateX(250%) skewX(-20deg); }
+        }
+
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes tracking-in {
+            0% { letter-spacing: 1em; opacity: 0; filter: blur(10px); }
+            100% { letter-spacing: 0.4em; opacity: 1; filter: blur(0); }
+        }
+
+        .animate-logo-reveal { animation: logo-reveal 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards; }
+        .animate-pulse-ring { animation: pulse-ring 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+        .animate-shimmer { animation: shimmer 2s infinite ease-out; }
+        .animate-float { animation: float-gentle 4s ease-in-out infinite; }
+        .animate-tracking { animation: tracking-in 1.5s cubic-bezier(0.23, 1, 0.32, 1) 0.5s forwards; opacity: 0; }
+        
+        .logo-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shimmer-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.8), transparent);
+            z-index: 10;
+        }
+
+        .mesh-bg {
+            background-color: #047857;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(161,72%,48%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(158,64%,52%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(152,69%,40%,1) 0, transparent 50%);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

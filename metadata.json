@@ -1,0 +1,8 @@
+{
+  "name": "Saiful Pharmacy Management",
+  "description": "A premium, high-performance business management suite for Saiful Pharmacy, specializing in medicine sales, inventory tracking, and AI-driven business insights.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
